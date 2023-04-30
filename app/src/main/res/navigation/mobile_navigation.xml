@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mysports.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_accounts"
+        android:name="com.example.mysports.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.mysports.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_my_sports"
+        android:name="com.example.mysports.ui.my_sport.MySportFragment"
+        android:label="@string/title_my_sports"
+        tools:layout="@layout/fragment_mysports" />
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_basketball"-->
+<!--        android:name="com.example.mysports.ui.my_sport.basketball.BasketballFragment"-->
+<!--        android:label="@string/Basketball"-->
+<!--        tools:layout="@layout/fragment_basketball" />-->
+
+
+</navigation>
