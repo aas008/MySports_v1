@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.mysports.R
@@ -28,18 +30,31 @@ class MySportFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(MySportViewModel::class.java)
+        val v = inflater.inflate(R.layout.fragment_mysports,  container, false)
+        val bt = v.findViewById<Button>(R.id.button_basketball)
+        //Need help making this button clickable
 
-        _binding = FragmentMysportsBinding.inflate(inflater, container, false)
-       val root: View = binding.root
+//        bt.setOnClickListener (navigation.createNavigateOnClickListener(R.id.nav_my_sports_to_blankbasketball))
+//        {
+//
+//            val basketballFragmentVal = BlankBasketballFragment()
+//            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+//            transaction.replace(R.id.container,basketballFragmentVal)
+//            transaction.commit()
+//        }
 
-        val textView: TextView = binding.textMySport
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val notificationsViewModel =
+//            ViewModelProvider(this).get(MySportViewModel::class.java)
+//
+//        _binding = FragmentMysportsBinding.inflate(inflater, container, false)
+//       val root: View = binding.root
+//
+//        val textView: TextView = binding.textMySport
+//        notificationsViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
 
-      return root
+      return v.rootView
     }
 
     override fun onDestroyView() {

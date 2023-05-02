@@ -5,5 +5,6 @@
     <string name="title_profile">Profile</string>
     <string name="title_my_sports">My Sports</string>
     <string name="Basketball"> Basketball </string>
-    <string name="BasketballIntro"> Introduction to Basketball </string>
+    <string name="BasketballIntro"> Introduction to Basketball. This is a different fragment. </string>
+    <string name="Cricket">Cricket</string>
 </resources>
